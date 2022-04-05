@@ -13,11 +13,12 @@ public class Asignatura {
         this("Sin nombre",Tipo.FUNDAMENTACION);
     }
 
-    Asignatura(int codigoIE, Tipo tipo) {
-        this.nombre = "Sin nombre";
-        this.codigoInterno = codigoIE;
-        this.codigoExterno = codigoIE;
-        this.tipo = tipo;
+    Asignatura(int codigoInterno, Tipo tipo) {
+        this("Sin nombre", codigoInterno, 0, tipo);
+    }
+    
+    Asignatura(Tipo tipo, int codigoExterno) {
+        this("Sin nombre", 0, codigoExterno, tipo);
     }
 
     Asignatura(String nombre, Tipo tipo) {
